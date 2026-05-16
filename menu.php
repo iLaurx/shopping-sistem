@@ -20,9 +20,8 @@ $nombreCliente = $logueado ? $_SESSION['nombreCliente'] : '';
         <?php else: ?>
             <span class="bienvenida">BIENVENIDO <?php echo strtoupper($nombreCliente); ?></span>
             <a href="cerrar_sesion.php">SALIR</a>
-            <a href="carrito01.php" class="link-carrito">
-                VER CARRITO 🛒
-            </a>
+            <a href="pedidos_lista.php">MIS PEDIDOS</a>
+            <a href="carrito01.php" class="link-carrito">VER CARRITO 🛒</a>
         <?php endif; ?>
     </div>
 </header>

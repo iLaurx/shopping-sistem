@@ -539,3 +539,245 @@ h2 {
     background-color: #fff;
     color: #000;
 }
+
+/* --- MAQUETACIÓN DEL SISTEMA DE CARRITO --- */
+.carrito-contenedor-main {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.carrito-contenedor-main h2 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Configuración de columnas tabulares en base a flex */
+.carrito-encabezado-tabla, .renglon-carrito {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.carrito-encabezado-tabla {
+    border-top: 1px solid #000;
+    background-color: #fafafa;
+}
+
+.renglon-carrito {
+    font-weight: normal;
+}
+
+.renglon-carrito.lectura {
+    padding: 25px 20px;
+}
+
+/* Distribución proporcional de anchos de columna */
+.c-prod { flex: 2; text-align: left; }
+.c-cod  { flex: 1; text-align: center; }
+.c-precio { flex: 1; text-align: center; font-weight: bold; }
+.c-cant { flex: 1; text-align: center; }
+.c-sub  { flex: 1; text-align: center; font-weight: bold; }
+.c-acc  { flex: 1; text-align: center; }
+
+.img-txt {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.img-txt img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.c-cant input {
+    width: 50px;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #000;
+    font-weight: bold;
+}
+
+/* Bloques de confirmación embebidos */
+.confirmar-borrar-bloque {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-weight: bold;
+}
+
+.btn-eliminar-item {
+    background: none; border: none; color: red;
+    font-weight: bold; cursor: pointer; text-decoration: underline;
+}
+
+.btn-si, .btn-no, .btn-si-final, .btn-no-final {
+    padding: 4px 15px; border: 1px solid #000; cursor: pointer; font-weight: bold;
+}
+.btn-si, .btn-si-final { background-color: #000; color: #fff; }
+.btn-no, .btn-no-final { background-color: #fff; color: #000; }
+
+/* Totales y Botoneras */
+.carrito-pie-totales {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 20px;
+}
+
+.total-caja {
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.botonera-pasos {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.btn-continuar, .btn-finalizar, .btn-regresar {
+    padding: 15px 30px; font-weight: 800; font-size: 12px;
+    letter-spacing: 1px; text-transform: uppercase; text-decoration: none; cursor: pointer;
+}
+.btn-continuar, .btn-finalizar { background-color: #000; color: #fff; border: 1px solid #000; }
+.btn-regresar { background-color: #fff; color: #000; border: 1px solid #000; }
+
+.confirmar-final-bloque {
+    width: 100%; text-align: right; margin-top: 20px;
+    border-top: 1px solid #000; padding-top: 20px;
+}
+.confirmar-final-bloque p { font-weight: bold; margin-bottom: 15px; }
+
+/* Mensaje Carrito Vacío */
+.carrito-vacio {
+    text-align: center; padding: 60px 0; border-top: 1px solid #000; border-bottom: 1px solid #000;
+}
+.carrito-vacio p { font-weight: bold; color: #555; margin-bottom: 20px; }
+.carrito-vacio a {
+    display: inline-block; background: #000; color: #fff; padding: 12px 30px;
+    text-decoration: none; font-weight: bold; font-size: 12px; letter-spacing: 1px;
+}
+
+/* Pantalla de Éxito */
+.exito-recuadro {
+    text-align: center; border: 1px solid #000; padding: 60px; max-width: 500px; margin: 40px auto;
+}
+.icono-check { font-size: 48px; color: green; display: block; margin-bottom: 20px; }
+.exito-recuadro h3 { font-size: 18px; font-weight: 800; margin-bottom: 10px; }
+.exito-recuadro p { color: #555; font-size: 14px; margin-bottom: 30px; }
+.exito-recuadro a { background: #000; color: #fff; padding: 12px 25px; text-decoration: none; font-weight: bold; }
+
+/* --- MAQUETACIÓN HISTORIAL DE PEDIDOS (PEDIDOS_LISTA.PHP) --- */
+.pedidos-contenedor-main {
+    max-width: 1200px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 0 10px;
+}
+
+.pedidos-contenedor-main h2 {
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.pedidos-encabezado-tabla, .renglon-pedido {
+    display: flex;
+    align-items: center;
+    padding: 18px 20px;
+    border-bottom: 1px solid #000;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.pedidos-encabezado-tabla {
+    border-top: 1px solid #000;
+    background-color: #fafafa;
+}
+
+.renglon-pedido {
+    font-weight: normal;
+    transition: background-color 0.2s ease;
+}
+
+.renglon-pedido:hover {
+    background-color: #fcfcfc; /* Un sutil cambio al pasar el mouse */
+}
+
+/* Flex e ID de columnas fijas */
+.col-id        { flex: 1; text-align: left; font-weight: bold; }
+.col-fecha     { flex: 2; text-align: center; }
+.col-articulos { flex: 1; text-align: center; }
+.col-total     { flex: 1; text-align: right; font-weight: bold; }
+
+.pedidos-pie {
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.btn-volver-tienda {
+    padding: 12px 25px;
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+    font-weight: 800;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-volver-tienda:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.pedidos-vacio {
+    text-align: center;
+    padding: 60px 0;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.pedidos-vacio p {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.pedidos-vacio a {
+    display: inline-block;
+    background: #000;
+    color: #fff;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
