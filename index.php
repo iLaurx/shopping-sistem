@@ -4,12 +4,12 @@ session_start();
 require "funciones/conecta.php";
 $con = conecta();
 
-// 1. Consulta para obtener una promoción al azar
+// Consulta para obtener una promoción al azar
 $sqlBanner = "SELECT imagen_url FROM promociones WHERE activa = 1 ORDER BY RAND() LIMIT 1";
 $resBanner = $con->query($sqlBanner);
 $banner = $resBanner->fetch_assoc();
 
-// 2. Consulta para obtener 6 productos al azar (no eliminados)
+// Consulta para obtener 6 productos al azar sin eliminados
 $sqlProductos = "SELECT id_producto, nombre, codigo, precio, imagen_url FROM productos WHERE eliminado = 0 ORDER BY RAND() LIMIT 6";
 $resProductos = $con->query($sqlProductos);
 ?>
