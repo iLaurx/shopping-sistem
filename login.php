@@ -11,6 +11,7 @@ if (isset($_SESSION['idCliente'])) {
 <head>
     <meta charset="UTF-8">
     <title>Login - Sistema de Pedidos</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery-4.0.0.min.js"></script>
     <script src="js/funciones_login.js"></script>

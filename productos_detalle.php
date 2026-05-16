@@ -23,6 +23,7 @@ $prod = $res->fetch_assoc();
 <head>
     <meta charset="UTF-8">
     <title><?php echo $prod['nombre']; ?> - Detalle</title>
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
     <link rel="stylesheet" href="style.css">
     <script src="js/jquery-4.0.0.min.js"></script>
     <script src="js/funciones_carrito.js"></script>
